@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Speed Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <div class="stat">SCORE: <span id="score">0</span></div>
+      <div class="stat">BEST: <span id="highscore">0</span></div>
+      <div class="stat">TIME: <span id="timer">30</span>s</div>
+    </div>
+
+    <!-- Difficulty Selector -->
+    <div class="difficulty-selector" id="difficulty-box">
+      <button class="diff-btn active" onclick="setDifficulty('easy')">Easy</button>
+      <button class="diff-btn" onclick="setDifficulty('medium')">Medium</button>
+      <button class="diff-btn" onclick="setDifficulty('hard')">Hard</button>
+    </div>
+
+    <div class="target-box">
+      <div class="label">SOLVE THIS:</div>
+      <div id="question">Press START</div>
+    </div>
+
+    <div class="display-box">
+      <input type="text" id="calc-display" readonly placeholder="0">
+    </div>
+
+    <div class="keypad">
+      <button class="btn clear" onclick="clearDisplay()">C</button>
+      <button class="btn" onclick="deleteLast()">DEL</button>
+      <button class="btn start-btn" onclick="startGame()" id="start-btn">START</button>
+
+      <button class="btn" onclick="appendNum('7')">7</button>
+      <button class="btn" onclick="appendNum('8')">8</button>
+      <button class="btn" onclick="appendNum('9')">9</button>
+
+      <button class="btn" onclick="appendNum('4')">4</button>
+      <button class="btn" onclick="appendNum('5')">5</button>
+      <button class="btn" onclick="appendNum('6')">6</button>
+
+      <button class="btn" onclick="appendNum('1')">1</button>
+      <button class="btn" onclick="appendNum('2')">2</button>
+      <button class="btn" onclick="appendNum('3')">3</button>
+
+      <button class="btn" onclick="appendNum('-')">-</button>
+      <button class="btn" onclick="appendNum('0')">0</button>
+      <button class="btn submit" onclick="submitAnswer()">GO</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
